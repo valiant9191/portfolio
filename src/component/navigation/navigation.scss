@@ -1,0 +1,29 @@
+.Navigation{
+    position: fixed;
+    z-index: 100;
+    margin-top:  calc(10vh/4);
+    left:10%;
+    background:radial-gradient(circle, rgb(64, 224, 208) 0%,rgb(223, 223, 223) 100%);
+    box-shadow: 4px 4px 6px 1px #45233e5d;
+    width: fit-content;
+    border-radius: 3px;
+    transition: all 0.2s;
+    text-align: center;
+    vertical-align: middle;
+    font-size: calc(10vh/3);
+
+    
+    &:hover{
+        transform: scale(1.1);
+        background:radial-gradient(circle,rgb(64, 224, 208) 70%,rgb(223, 223, 223) 120%);
+
+    }
+    &:active{
+        transform: scale(1);  
+        background:radial-gradient(circle,rgb(64, 224, 208) 0%,rgb(255, 209, 148) 90%);
+        box-shadow: 2px 2px 3px 0px #45233e5d;
+
+
+    }
+}
+

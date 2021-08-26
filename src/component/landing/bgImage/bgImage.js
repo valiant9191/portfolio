@@ -175,7 +175,7 @@ const textForTitle=`Walt Whitman Song of the Open Road`;
 
 const textTitle=textForTitle.split(' ').map((el, id)=><h1 className='textMain' key={id}>{el}</h1>)
 
-const textMain=textOpen.split(/[.,]/).map((el, id)=><span className='textMain' key={id}>{el}</span>)
+const textMain=textOpen.split(/[.,!]/).map((el, id)=><span className='textMain' key={id}>{el}</span>)
 
 
     return(

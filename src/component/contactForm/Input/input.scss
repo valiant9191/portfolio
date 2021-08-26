@@ -1,0 +1,57 @@
+$color-text-after: #45233e3b ;
+$color-text: #45233e ;
+$color-border: rgb(64, 224, 208);
+$color-background: #fffff5;
+
+.Input{
+    width:50%;
+    position: relative;
+    & .input-field{
+        // display: flex;
+        height: 20px;
+        width: 100%;
+        border: 0.2px solid $color-text-after;
+        border-radius: 4px;
+        background-color: $color-background; 
+        color: $color-text;
+        outline:none; 
+        font-size: medium; 
+        transition:250ms ;
+
+        &:focus{
+            transform: scale(1.1);
+            background-color: $color-background;
+            // text-align: center; 
+
+            // border-style: $color-background;
+        }
+        &:focus-visible{
+            height: 25px;
+            border:1px solid $color-border ;
+            animation: cd-pulse;
+            animation-duration: 1s; 
+            outline:none;
+        }
+       
+    }
+}
+
+
+
+@keyframes cd-pulse
+{
+0%  {box-shadow:0 0 0 0 #0079ff}
+100%{box-shadow:0 0 0 10px rgba(255, 255, 255, 0)}
+}
+
+
+// .label-input{
+//     position:absolute;
+//     top:50%;
+//     left: 50%;
+//    
+//     transition: 250ms;
+//     &:focus-within{
+//         transform: translate(.25rem, -65%) scale(.8);
+//     }
+// }

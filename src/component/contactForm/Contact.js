@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 import Navigation from "../navigation/navigation";
 import "./contact.scss";
 import Input from "./Input/Input";
+import MyInfo from "./myInfo/myInfo";
 
 const ContactForm = () => {
   const [valueState, setValueState] = useState({
@@ -37,7 +38,7 @@ const ContactForm = () => {
             console.log(error.text);
           }
         );
-        alert('Your message has been sent, Thank you!')
+      alert("Your message has been sent, Thank you!");
     } else {
       alert("Please fill the form");
     }
@@ -47,29 +48,19 @@ const ContactForm = () => {
     <div className="Contact">
       <Navigation />
       <div className="info">
-          <p className='bg-text' unselectable='on'>{`<contact-info>`}</p>
-          <p className='bg-text'>{`<p>`}</p>
-        <p>
-          Valentin Kolko, <br />
-          Front-End developer <br />
-          Belarus, Minsk <br />
-          <a href="mailto: valiant9191@gmail.com">valiant9191@gmail.com</a>
-          <br />
-          phone : <a href="tel: +375 (29) 359 32 15 ">+375 293593215</a>
-        </p>
-        <p className='bg-text '>{`  </ p>`}</p>
-
-        <p className='bg-text '>{`</ contact-info>`}</p>
-        
+        <p className="bg-text" unselectable="on">{`<contact-info>`}</p>
+        <p className="bg-text">{`<p>`}</p>
+        <MyInfo />
+        <p className="bg-text ">{`  </ p>`}</p>
+        <p className="bg-text ">{`</ contact-info>`}</p>
       </div>
-      
       <form id="contact-form" onSubmit={sendEmail}>
-      <p className='bg-text '>{`< p>`}</p>
+        <p className="bg-text ">{`< p>`}</p>
         <p>
           If you have any request or question, don’t hesitate to use the form.
         </p>
-        <p className='bg-text '>{`</ p>`}</p>
-        <p className='bg-text '>{`  <form>`}</p>
+        <p className="bg-text ">{`</ p>`}</p>
+        <p className="bg-text ">{`  <form>`}</p>
         <Input
           placeholderInput="Subject"
           typeInput="text"
@@ -87,11 +78,10 @@ const ContactForm = () => {
           placeholder="Message"
         ></textarea>
         <br />
-        <p className='bg-text '>{`</ form>`}</p>
-        <p className='bg-text '>{`<submit>`}</p>
+        <p className="bg-text ">{`</ form>`}</p>
+        <p className="bg-text ">{`<submit>`}</p>
         <input className="submit-input" type="submit" value="Send message" />
-        <p className='bg-text '>{`</ submit>`}</p>
-        
+        <p className="bg-text ">{`</ submit>`}</p>
       </form>
     </div>
   );

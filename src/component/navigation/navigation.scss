@@ -3,7 +3,6 @@
     top: 0;
     z-index: 100;
     box-shadow: 4px 4px 6px 1px #45233e5d;
-    // width: 1000px;
     height:  fit-content;
     width: fit-content;
     border-radius: 3px;
@@ -64,7 +63,6 @@
         position:fixed;
         left: 5%;
         top:5%;
-        // border: 1px solid red;
         background: url(../../assets/logo-close.png) repeat-x 0 0;;
         background-size: cover;
         background-color: transparent;
@@ -79,32 +77,73 @@
 
         }
     }
-    & .menu-closed{
-        width:30px ;
-        height: 30px;
-        position: fixed;
-        left: 20px;
-        top:20px;
-        background:url(../../assets/menu-open.png);        
-        border-radius: 4px;
-        background-size: cover;
-        // transition: all 0.2s;
-        &:active{
-            transform: scale(1);  
-            box-shadow: 2px 2px 3px 0px #45233e5d; 
-        }
-        &:hover{
-            transform: scale(1.03);
-           color:#f92900;
-           box-shadow: 2px 2px 3px 0px #45233e5d; 
 
+    & .menu-closed{
+        padding: 5px;
+            max-width:calc(100px + padding);
+            height: 30px;
+            position: fixed;
+            display: flex;
+            align-items: center;
+            color: #45233eb8;
+            left: 20px;
+            top:20px;
+            border: 0.5px solid #652f2f;
+            border-radius: 4px;
+            box-shadow: 2px 2px 3px 2px #45233e5d; 
+            background-color: rgba(64, 224, 208, 0.9);
+            
+            &:active{
+                transform: scale(1);  
+                box-shadow: 2px 2px 3px 0px ; 
+            }
+            &:hover{
+                transform: scale(1.03);
+               color:#652f2f;
+               box-shadow: 2px 2px 3px 0px #45233e5d;     
+            }
+        &-hamburger{
+            height: 20px;
+            width:20px ;
+            background:url(../../assets/menu-open.png);        
+            border-radius: 4px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+
+            &-text{
+                position: fixed;
+                
+
+            }
         }
     }
+   
     & .info{
         height: 100%;
 display: flex;   
 align-items: flex-end;   
 justify-content: center; 
+align-items: center;
+& img{
+    width: 20px;
+    height: 20px;
+}
+& .links{
+    text-decoration: none;
+    color: #51407b;
+    font-family:Cambria, cursive, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: cursive;
+    font-size:medium;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    letter-spacing: normal;
+
+    & :hover{
+        color: #000000;
+    }
+}
     }
     
 }

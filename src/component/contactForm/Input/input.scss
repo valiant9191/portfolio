@@ -17,13 +17,10 @@ $color-background: #fffff5;
         outline:none; 
         font-size: medium; 
         transition:250ms ;
-
+        padding: 5px;
         &:focus{
             transform: scale(1.1);
             background-color: $color-background;
-            // text-align: center; 
-
-            // border-style: $color-background;
         }
         &:focus-visible{
             height: 25px;
@@ -31,27 +28,11 @@ $color-background: #fffff5;
             animation: cd-pulse;
             animation-duration: 1s; 
             outline:none;
-        }
-       
+        }       
     }
 }
-
-
-
 @keyframes cd-pulse
 {
 0%  {box-shadow:0 0 0 0 #0079ff}
 100%{box-shadow:0 0 0 10px rgba(255, 255, 255, 0)}
 }
-
-
-// .label-input{
-//     position:absolute;
-//     top:50%;
-//     left: 50%;
-//    
-//     transition: 250ms;
-//     &:focus-within{
-//         transform: translate(.25rem, -65%) scale(.8);
-//     }
-// }

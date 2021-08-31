@@ -7,38 +7,41 @@ const Landing = () => {
   const [welcomeSection, setWelcomeSection] = useState(0);
 
   useEffect(() => {
-    let mounted=true;
+    let mounted = true;
 
     setTimeout(newChangeI, 5000);
     function newChangeI() {
       setInterval(changeI, 3000);
     }
     function changeI() {
-        if (mounted){
-      const languages = [
-        "Добро пожаловать",
-        "Witamy",
-        "Laukiamas",
-        "Welkom",
-        "Vitejte",
-        "Velkomst",
-        "Tere tulemast",
-        "Tervetuloa",
-        "Welgekomen",
-        "Bienvenue",
-        "Willkommen",
-        "Failte",
-        "Benvenuto",
-        "Gaidits",
-      ];
-      setWelcomeSection(languages[testI]);
-      testI = testI + 1;
-      if (testI > languages.length) {
-        testI = 0;
-      }}
+      if (mounted) {
+        const languages = [
+          "Добро пожаловать",
+          "Witamy",
+          "Laukiamas",
+          "Welkom",
+          "Vitejte",
+          "Velkomst",
+          "Tere tulemast",
+          "Tervetuloa",
+          "Welgekomen",
+          "Bienvenue",
+          "Willkommen",
+          "Failte",
+          "Benvenuto",
+          "Gaidits",
+        ];
+        setWelcomeSection(languages[testI]);
+        testI = testI + 1;
+        if (testI > languages.length) {
+          testI = 0;
+        }
+      }
     }
     let testI = 0;
-    return function cleanup(){mounted=false;}
+    return function cleanup() {
+      mounted = false;
+    };
   }, []);
 
   // changing welcome with interval
@@ -77,6 +80,16 @@ const Landing = () => {
 
         <div className="Welcome">
           <h1 className="letter">{textCenter}</h1>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <hr className="letter" />
+          <br />
+          <br />
+          <br />
+          <br />
           <br />
 
           <h1 className="letter">

@@ -14,13 +14,12 @@ function Navigation() {
   const closeMenu = () => {
     setState(false);
   };
-  const one = [];
   return (
     <div className="menu">
       <div className="menu__logo">
         <img src={img} alt="logotip val" />
       </div>
-      {width < 720 ? (
+      {width < 730 ? (
         <MobileMenu
           state={state}
           onClickOpen={openMenu}
@@ -30,22 +29,22 @@ function Navigation() {
         <header className="menu__header">
           <ul className="menu__header_list">
             <li>
-              <Link className="link" to="/">
-                `Val`
+              <Link className="button menu__header_list-link" to="/">
+                {`< Main />`}
               </Link>
             </li>
             <li>
-              <Link className="link" to="/about">
+              <Link className="button menu__header_list-link" to="/about">
                 {`< About />`}
               </Link>
             </li>
             <li>
-              <Link className="link" to="/project">
+              <Link className="button menu__header_list-link" to="/project">
                 {`< Portfolio />`}
               </Link>
             </li>
             <li>
-              <Link className="link" to="/contact">
+              <Link className="button menu__header_list-link" to="/contact">
                 {`< Contacts />`}
               </Link>
             </li>

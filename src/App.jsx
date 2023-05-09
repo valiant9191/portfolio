@@ -13,7 +13,7 @@ function App() {
   const [stateSpinner, setStateSpinner] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setStateSpinner(false), 2200);
+    setTimeout(() => setStateSpinner(false), 300);
     setTimeout(() => setStateSpinner(true), 200);
   }, []);
 

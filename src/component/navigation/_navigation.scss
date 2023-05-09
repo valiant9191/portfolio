@@ -1,0 +1,185 @@
+.menu{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr  4fr;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: $color-secondary;
+    padding: 0.5em;
+    // top: 0;
+    // z-index: 100;
+    // box-shadow: 4px 4px 6px 1px #45233e5d;
+    // height:  fit-content;
+    // border-radius: 3px;
+    // text-align: center;
+    // vertical-align: middle;
+    // font-size: calc(10vh/4);
+    &__logo{
+        height: 2rem;
+        & img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__header{
+        display: flex;
+        &_list{
+            display: flex;
+        }
+    }
+    
+    & h2{
+        margin: 0;
+    }
+    
+    & .menu-open{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        // justify-content: space-around;
+        font-family: 'Allison', cursive, Arial, Helvetica, sans-serif;
+        font-size: xx-large;
+        background:#fffff5;
+        background-image: url('../../assets/background-city.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        color:#45233ee1;
+        border-radius: 3px;
+        min-width: fit-content;
+        height: 100vh;
+        width: 100vw;
+        letter-spacing: 3px;
+        overflow-x: scroll;
+        & .links-block{
+            display: flex;
+            margin-top:5%;
+            height: 100%;
+            flex-direction: column;
+            align-items: center;
+        }      
+    }
+    & .link{
+        text-decoration: none;
+
+        &:hover{
+            transform: scale(1.1);
+           color:#f92900;
+        }
+        &:active{
+            transform: scale(0.9);  
+            
+        }
+    }
+
+
+    
+    & .close-box{
+        width:30px ;
+        height: 30px;
+        position:fixed;
+        left: 5%;
+        top:5%;
+        background: url(../../assets/logo-close.png) repeat-x 0 0;;
+        background-size: cover;
+        background-color: transparent;
+        &:active{
+            transform: scale(1);  
+            box-shadow: 2px 2px 3px 0px #45233e5d; 
+        }
+        &:hover{
+            transform: scale(1.03);
+           color:#f92900;
+           box-shadow: 2px 2px 3px 0px #45233e5d; 
+
+        }
+    }
+
+    & .menu-closed{
+        padding: 5px;
+            max-width:100px;
+            height: 30px;
+            position: fixed;
+            display: flex;
+            align-items: center;
+            color: #45233eb8;
+            left: 20px;
+            top:20px;
+            border: 0.5px solid #652f2f;
+            border-radius: 4px;
+            box-shadow: 2px 2px 3px 2px #45233e5d; 
+            background-color: rgba(64, 224, 208, 0.8);
+            
+            &:active{
+                transform: scale(1);  
+                box-shadow: 2px 2px 3px 0px ; 
+            }
+            &:hover{
+                transform: scale(1.03);
+               color:#652f2f;
+               box-shadow: 2px 2px 3px 0px #45233e5d;     
+            }
+        &-hamburger{
+            height: 20px;
+            width:20px ;
+            background:url(../../assets/menu-open.png);        
+            border-radius: 4px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+
+            &-text{
+                position: fixed;
+                
+
+            }
+        }
+    }
+   
+    & .info{
+        height: 100%;
+display: flex;   
+align-items: flex-end;   
+justify-content: center; 
+align-items: center;
+& img{
+    width: 20px;
+    height: 20px;
+}
+& .links{
+    text-decoration: none;
+    color: #51407b;
+    font-family:Cambria, cursive, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: cursive;
+    font-size:medium;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    letter-spacing: normal;
+
+    & :hover{
+        color: #000000;
+    }
+}
+    }
+    
+}
+// .bg-text{
+//     font-family: 'Allison', cursive, Arial, Helvetica, sans-serif;
+//     color: #45233e5e;
+//     cursor: default;
+//     text-align: start;
+//     font-size:x-large;
+//     width: 60%;
+//     margin-bottom: 0;
+//     margin-top: 0;
+//     user-select: none;
+//     -moz-user-select: none;
+//     -webkit-user-select: none;
+//     -ms-user-select: none;
+//     &.last{
+//         margin-left: 10vw;
+//     }
+// }
+

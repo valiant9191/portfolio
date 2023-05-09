@@ -1,7 +1,7 @@
 import React from "react";
 import "./about.scss";
 // components 
-import Navigation from "../navigation/navigation";
+import {Navigation} from "../navigation/navigation";
 import Skills from "./skills/skills";
 import SoftSkills from "./softSkills/softSkills";
 import Languages from "./languages/languages";

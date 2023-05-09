@@ -1,82 +1,16 @@
-.Landing {
-    text-align: center;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
-  } 
-  .App-line{
-    height:100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .App-row{
-        width:50px;
-        color: #45233e;
-        animation-name: scaletext;
-        animation-duration: 1.5s;  
-        animation-delay: 3s;
-  }
-  
-  .letter{
-    display: flex; 
-    justify-content: center;
-    font-size:calc(100vh/15);
-    transition:all ease-in-out, .2s;
-    animation-fill-mode: backwards;
-    animation-name: animatrix;
-    animation-delay: 2s;
-    animation-duration: 2s;
+@import "./src/scss/mixins/placeholders.scss";
+.landing {
+  background-image: url(../../assets/bg/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  @extend %transition;
 
-    &-row{
-        font-size:calc(100vw/15);
-        animation-fill-mode: backwards;
-        animation-name: animatrix;
-        animation-delay: 1s;
-        animation-duration: 1s;
-      display: flex;
-      flex-direction: column;    
-      &::before{
-        opacity:0;
-      }  
-      &::after{
-        opacity:1;
-      }
-    }
-    &-active{
-        color:turquoise;
-        transform: rotatez(10deg)  scale(1.3);
-    }
-    &:hover{
-      color:turquoise;
-      transform: rotatez(10deg)  scale(1.3);
-    }
-  }  
-  
-  .Welcome{
-    width: 50%;
-    height:50%;    
-    & h1{
-      font-size:calc(100vw/15);
-    }
+  &.pre {
+    background-image: url(../../assets/bg/bg_low-quality.jpg);
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
   }
-
-
-@keyframes animatrix{
-    0%{opacity:0}
-    100%{opacity:0.5}
 }
-  
-@keyframes scaletext{
-    0%{
-        scale:1;
-    }
-    50%{
-        scale:1.2;
-        color:turquoise;
-    }
-    100%{
-        scale:1;
-    }
-}
-  

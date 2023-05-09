@@ -9,7 +9,7 @@ const Education = () => {
           09.2020-04.2021 WildCodeSchool: fullstack Javascript developer
         </h5>
         <p>
-          Web development full stack bootcamp. (English, remote) The program
+          Web development full-stack bootcamp. (English, remote) The program
           contains two main part: Frontend and Backend. Including two Hackathons
           for real companies. During this bootcamp I worked on 3 projects and 2
           hackathons.

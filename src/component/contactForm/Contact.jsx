@@ -1,8 +1,8 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
-import {Navigation} from "../navigation/navigation";
+import { Navigation } from "../navigation/navigation";
 import "./contact.scss";
-import Input from "./Input/Input";
+import { Input } from "./Input/Input";
 import MyInfo from "./myInfo/myInfo";
 
 function ContactForm() {
@@ -10,7 +10,7 @@ function ContactForm() {
     subj: "",
     nameSender: "",
     emailAdress: "",
-    message: "",
+    message: ""
   });
 
   function sendEmail(e) {
@@ -22,21 +22,20 @@ function ContactForm() {
     setValueState(valueState, (valueState.message = e.target.message.value));
 
     if (valueState.nameSender && valueState.emailAdress && valueState.message) {
-      emailjs
-        .sendForm(
-          "gmail-val",
-          "template_eqj51bb",
-          e.target,
-          process.env.REACT_APP_POST_ID_NAME
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
+      emailjs.sendForm(
+        "gmail-val",
+        "template_eqj51bb",
+        e.target,
+        process.env.REACT_APP_POST_ID_NAME
+      );
+      // .then(
+      //   (result) => {
+      //     console.log(result.text);
+      //   },
+      //   (error) => {
+      //     console.log(error.text);
+      //   }
+      // );
       alert("Your message has been sent, Thank you!");
     } else {
       alert("Please fill the form");
@@ -84,6 +83,6 @@ function ContactForm() {
       </form>
     </div>
   );
-};
+}
 
 export { ContactForm };
